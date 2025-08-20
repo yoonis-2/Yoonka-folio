@@ -1,9 +1,11 @@
+import Boxes from "../one-time-page/Boxes"
+
 function Home(){
-    return <div className="bg-[linear-gradient(to_right,#111E3D,#193375)] text-white">
-        <div className="flex justify-evenly pt-14 pb-20">
+    return <div className="bg-[linear-gradient(to_right,#111E3D,#193375)] h-[400vh] text-white">
+        <div className=" text-center pt-24 pb-20">
              {/* left */}
              <div>
-                <h2 className="font-bold text-4xl pb-3">I'm Yoonis <span className="text-[#BE85FC]">Gallad</span></h2>
+                <h2 className="font-bold text-5xl pb-3">I'm Yoonis <span className="text-[#BE85FC]">Gallad</span></h2>
                 <h4 className="pb-3 text-2xl font-medium">Frond-end Developer & UI/UX Designer</h4>
                 <p className="pb-4">Passionate about creating beautiful, functional web applications <br /> 
                 that solve real-world problems and deliver exceptional user <br /> experiences.</p>
@@ -12,12 +14,24 @@ function Home(){
                     <button className=  "border-2 border-blue-800 px-5 py-2 rounded-lg ml-4">Get In Touch</button>
                 </div>
              </div>
-             {/* right */}
-             <div>
-                <img className="w-96 h-96 rounded-lg" src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
-             </div>
-
         </div>
+        {/* section-2 */}
+        <div className="text-center mt-20">
+            <h3 className="font-bold text-5xl pb-3">About Me</h3>
+            <p className="text-xl">I'm a passionate full-stack developer with a Bachelor's degree in Computer Science <br /> 
+             and over 3 years of experience building modern web applications. I specialize in React, <br /> 
+             Node.js, and creating user-centered digital experiences.</p>
+        </div>
+        {/* section-3 */}
+        <div className="mt-16 flex justify-center gap-7">
+            <Boxes icons="fa-solid fa-user font-bold text-5xl pb-4 ml-3 mt-4 text-[#60A5FA]" name="Experience" title="1+ years developing scalable web  applications and collaborating with cross-  functional teams"/>
+            <Boxes icons="fa-solid fa-code font-bold text-5xl pb-4 ml-3 mt-4 text-[#60A5FA]" name="Skills" title="Expert in React, TypeScript, Node.js, Python, and modern development tools and practices."/>
+            <Boxes icons="fa-solid fa-star-of-life font-bold text-5xl pb-4 ml-3 mt-4 text-[#60A5FA]" name="Passion" title="Dedicated to creating innovative solutions that solve real-world problems and enhance user experiences."/>
+        </div>
+        <div>
+            <button className="border-2 border-[#60A5FA] px-14 py-2 rounded-lg mt-7 ml-[35%] font-medium text-xl text-[#60A5FA]">Learn More About Me <i class="fa-solid fa-chevron-right pl-4"></i></button>
+        </div>
+
 
     </div>
 }
