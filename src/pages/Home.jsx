@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Data from "../components/Data"
 import Boxes from "../one-time-page/Boxes"
 import Featured from "../one-time-page/Featured"
@@ -48,7 +49,7 @@ function Home(){
         
         </div>
          <div className="ml-[43%]">
-        <button className="bg-[linear-gradient(to_right,#2465E9,#0A8EB6)] px-5 py-2 rounded-lg mt-10">View All Project</button>
+        <Link to="/view-project"><button className="bg-[linear-gradient(to_right,#2465E9,#0A8EB6)] px-5 py-2 rounded-lg mt-10">View All Project</button></Link>
       </div>
 
 
