@@ -13,7 +13,7 @@ function Home(){
                 <p className="pb-4">Passionate about creating beautiful, functional web applications <br /> 
                 that solve real-world problems and deliver exceptional user <br /> experiences.</p>
                 <div>
-                    <button className="bg-blue-800 px-5 py-2 rounded-lg ">View My Work</button>
+                    <Link to="/view-work"><button className="bg-blue-800 px-5 py-2 rounded-lg ">View My Work</button></Link>
                     <button className=  "border-2 border-blue-800 px-5 py-2 rounded-lg ml-4">Get In Touch</button>
                 </div>
              </div>
@@ -32,7 +32,7 @@ function Home(){
             <Boxes icons="fa-solid fa-star-of-life font-bold text-5xl pb-4 ml-3 mt-4 text-[#60A5FA]" name="Passion" title="Dedicated to creating innovative solutions that solve real-world problems and enhance user experiences."/>
         </div>
         <div>
-            <button className="border-2 border-[#60A5FA] px-5 py-2 rounded-lg mt-7 ml-[35%] font-medium text-xl text-[#60A5FA]">Learn More About Me <i class="fa-solid fa-chevron-right pl-4"></i></button>
+            <Link to="learn-more"><button className=" bg-[#60A5FA] px-5 py-2 rounded-lg mt-7 ml-[38%] font-medium text-xl text-white">Learn More About Me <i class="fa-solid fa-chevron-right pl-4"></i></button></Link>
         </div>
         <div className="text-center mt-16">
             <h3 className="font-bold text-3xl pb-3">Featured Projects</h3>
@@ -40,7 +40,7 @@ function Home(){
         </div>
         <div className=" mt-10 flex justify-center gap-7">
             {
-                Data.map((item) => {
+                Data.slice(0,3).map((item) => {
                     return (
                         <Featured project={item}/>
                     )
@@ -49,7 +49,7 @@ function Home(){
         
         </div>
          <div className="ml-[43%]">
-        <Link to="/view-project"><button className="bg-[linear-gradient(to_right,#2465E9,#0A8EB6)] px-5 py-2 rounded-lg mt-10">View All Project</button></Link>
+        <Link to="/view-all"><button className="bg-[linear-gradient(to_right,#2465E9,#0A8EB6)] px-5 py-2 rounded-lg mt-10">View All Project</button></Link>
       </div>
 
 
