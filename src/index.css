@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+.active {
+    border-bottom: 2px solid #0B8CB8;
+}

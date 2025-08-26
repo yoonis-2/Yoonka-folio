@@ -11,20 +11,31 @@ function Project() {
         const CategoryData = category ? data.category === category : true
         return SearchData && CategoryData
     })
+
+    const btn = "px-4 py-2 rounded-lg"
+
+    const getbtnClass = (btncategory) => {
+        return category === btncategory
+        ? "bg-[#0B8CB8] text-white" 
+        : "bg-[#111A30] text-white "
+        
+    } 
+
+
   return (
     <div className="bg-[linear-gradient(to_right,#111B35,#1E3A89)] text-white">
         <h3 className="text-3xl font-bold text-center pt-10 pb-3">My <span className="text-[#0B8CB8]">Project</span></h3>
         <p className="text-xl text-center pb-32">A showcase of my recent work, featuring web applications, mobile apps, and innovative solutions <br /> built with modern technologies.</p>
-        <div className="flex gap-10 ml-5 mb-16">
-            <input onChange={(e) => setSearch(e.target.value)} type="search" placeholder="Search" className="bg-[#0B8CB8] text-white px-10 rounded-md py-2  border-none outline-none" />
+        <div className="flex justify-between px-10 ml-5 mb-16">
+            <p className="mt-2 font-medium">Category by filter</p>
             <div className="space-x-7 ml-3">
-                <button onClick={() => setCategory("")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">All</button>
-                <button onClick={() => setCategory("Web")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">Web</button>
-                <button onClick={() => setCategory("E-commerce")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg ">E-commerce</button>
-                <button onClick={() => setCategory("Dashboard")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">Dashboard</button>
-                 <button onClick={() => setCategory("Instagram-Dashboard")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">Instagram-Dashboard</button>
-                <button onClick={() => setCategory("Tools")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">Tools</button>
-                <button onClick={() => setCategory("Mobile-App")} className="bg-[#0B8CB8] text-white px-4 py-2 rounded-lg">Mobile-App</button>
+                <button onClick={() => setCategory("")} className={`${btn} ${getbtnClass("")}`}>All</button>
+                <button onClick={() => setCategory("Web")} className={`${btn} ${getbtnClass("Web")}`} >Web</button>
+                <button onClick={() => setCategory("E-commerce")} className={`${btn} ${getbtnClass("E-commerce")}`} >E-commerce</button>
+                <button onClick={() => setCategory("Dashboard")} className={`${btn} ${getbtnClass("Dashboard")}`} >Dashboard</button>
+                 <button onClick={() => setCategory("Instagram-Dashboard")} className={`${btn} ${getbtnClass("Instagram-Dashboard")}`} >Instagram-Dashboard</button>
+                <button onClick={() => setCategory("Tools")} className={`${btn} ${getbtnClass("Tools")}`} >Tools</button>
+                <button onClick={() => setCategory("Mobile-App")} className={`${btn} ${getbtnClass("Mobile-App")}`} >Mobile-App</button>
             </div>
         </div>
         <div className="flex flex-wrap justify-center gap-6 pb-10">

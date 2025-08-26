@@ -9,6 +9,7 @@ function Featured({project}){
         <h4 className="bg-[#294370] px-2  py-2 ml-3 rounded-lg ">{project.title2}</h4>
         <h4 className="bg-[#294370] px-2  py-2 ml-3 rounded-lg ">{project.title3}</h4>
       </div>
+     
     </div>
 
   </div>

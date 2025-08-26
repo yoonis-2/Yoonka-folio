@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Project from "./pages/Project"
+import Contact from "./pages/Contact"
 
 function App(){
   return <div>
@@ -12,13 +13,14 @@ function App(){
       <Route path="/" element={<Home/>}/>
       <Route path="/view-work" element={<Project/>}/>
       <Route path="/about" element={<About/>}/>
+      <Route path="/about" element={<Contact/>}/>
       <Route path="/learn-more" element={<About/>}/>
       <Route path="/project" element={<Project/>}/>
       <Route path="/view-all" element={<Project/>}/>
       <Route path="/" element={<About/>}/>
     
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
   </div>
 }
 

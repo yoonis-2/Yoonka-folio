@@ -8,7 +8,7 @@ function Header() {
                 <NavLink to="/"><li>Home</li></NavLink>
                 <NavLink to="/about"><li>About</li></NavLink>
                 <NavLink to="/project"><li>Project</li></NavLink>
-                <NavLink to="/contact"><li>Contact</li></NavLink>
+                <NavLink to="/Contacts"><li>Contact</li></NavLink>
             </ul>
     </div>
   )
